@@ -1,0 +1,18 @@
+.App{
+  min-height:100vh;
+  display:flex;
+  background-color: darkslategrey;
+  color: black;
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgba(155, 155, 155, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: rgba(100, 100, 100, 0.5);
+}
