@@ -15,9 +15,7 @@ const app = express();
 
 app.use(express.json())// to accept json data
 
-app.get('/', (req,res)=>{
-    res.send("API is Running")
-})
+
 
 app.use('/api/user',userRoutes)
 app.use('/api/chat',chatRoutes)
@@ -29,6 +27,8 @@ if(process.env.NODE_ENV === "production"){
     app.use(express.static(path.join(__dirname1, "/frontend/build")));
     app.get("*", (req, res) =>{
         res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
+        
+           
     })
 
 }else{
