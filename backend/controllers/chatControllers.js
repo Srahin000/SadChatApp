@@ -19,7 +19,7 @@ const accessChat = asyncHandler(async (req, res) => {
 
 
     isChat = await User.populate(isChat, {
-        path:'latesMessage.sender',
+        path:'latestMessage.sender',
         select: "name pic email",
     });
     if (isChat.length > 0) {
@@ -33,7 +33,7 @@ const accessChat = asyncHandler(async (req, res) => {
     try {
         const createdChat = await Chat.create(chatData);
 
-        const FullChat = await Chat.findOne({_id:createdChat._id}).populate(users, "-password");
+        const FullChat = await Chat.findOne({_id:createdChat._id}).populate("users", "-password");
 
         res.status(200).send(FullChat);
     } catch (error) {
