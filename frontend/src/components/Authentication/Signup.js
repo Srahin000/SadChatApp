@@ -62,6 +62,7 @@ const Signup = () => {
 
         setLoading(false);
         history.push('/chats')
+        history.go(0)
         
     } catch (error) {
         toast({
