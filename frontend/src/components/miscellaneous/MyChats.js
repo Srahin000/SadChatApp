@@ -63,14 +63,7 @@ useEffect(()=>{
         justifyContent={"space-between"}
         alignItems={"center"}>
           My Chats
-          <Button
-            display="flex"
-            fontFamily={"Bebas Neue"}
-            fontSize={{ base: "17px", md: "10px", lg: "17px" }}
-            rightIcon={<AddIcon />}
-          >
-            New Group Chat
-          </Button>        
+              
       </Box>
       <Box
         display="flex"
